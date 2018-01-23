@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFC56B382016CBD200BA5487 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B372016CBD200BA5487 /* AppDelegate.m */; };
+		EFC56B3B2016CBD300BA5487 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B3A2016CBD300BA5487 /* ViewController.m */; };
+		EFC56B3E2016CBD300BA5487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC56B3C2016CBD300BA5487 /* Main.storyboard */; };
+		EFC56B402016CBD300BA5487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC56B3F2016CBD300BA5487 /* Assets.xcassets */; };
+		EFC56B432016CBD300BA5487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC56B412016CBD300BA5487 /* LaunchScreen.storyboard */; };
+		EFC56B462016CBD300BA5487 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B452016CBD300BA5487 /* main.m */; };
+		EFC56B502016CBD300BA5487 /* ZGCycleScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B4F2016CBD300BA5487 /* ZGCycleScrollViewTests.m */; };
+		EFC56B5B2016CBD300BA5487 /* ZGCycleScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B5A2016CBD300BA5487 /* ZGCycleScrollViewUITests.m */; };
+		EFC56B6C2016CC1100BA5487 /* ZGCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B6B2016CC1100BA5487 /* ZGCycleScrollView.m */; };
+		EFC56B6F2016D3EE00BA5487 /* ZGCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B6E2016D3EE00BA5487 /* ZGCycleCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFC56B4C2016CBD300BA5487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC56B2B2016CBD200BA5487 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC56B322016CBD200BA5487;
+			remoteInfo = ZGCycleScrollView;
+		};
+		EFC56B572016CBD300BA5487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC56B2B2016CBD200BA5487 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC56B322016CBD200BA5487;
+			remoteInfo = ZGCycleScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFC56B332016CBD200BA5487 /* ZGCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC56B362016CBD200BA5487 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFC56B372016CBD200BA5487 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFC56B392016CBD300BA5487 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EFC56B3A2016CBD300BA5487 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EFC56B3D2016CBD300BA5487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFC56B3F2016CBD300BA5487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFC56B422016CBD300BA5487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFC56B442016CBD300BA5487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC56B452016CBD300BA5487 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFC56B4B2016CBD300BA5487 /* ZGCycleScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGCycleScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC56B4F2016CBD300BA5487 /* ZGCycleScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleScrollViewTests.m; sourceTree = "<group>"; };
+		EFC56B512016CBD300BA5487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC56B562016CBD300BA5487 /* ZGCycleScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGCycleScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC56B5A2016CBD300BA5487 /* ZGCycleScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleScrollViewUITests.m; sourceTree = "<group>"; };
+		EFC56B5C2016CBD300BA5487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC56B6A2016CC1100BA5487 /* ZGCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGCycleScrollView.h; sourceTree = "<group>"; };
+		EFC56B6B2016CC1100BA5487 /* ZGCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleScrollView.m; sourceTree = "<group>"; };
+		EFC56B6D2016D3EE00BA5487 /* ZGCycleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGCycleCell.h; sourceTree = "<group>"; };
+		EFC56B6E2016D3EE00BA5487 /* ZGCycleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFC56B302016CBD200BA5487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B482016CBD300BA5487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B532016CBD300BA5487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFC56B2A2016CBD200BA5487 = {
+			isa = PBXGroup;
+			children = (
+				EFC56B352016CBD200BA5487 /* ZGCycleScrollView */,
+				EFC56B4E2016CBD300BA5487 /* ZGCycleScrollViewTests */,
+				EFC56B592016CBD300BA5487 /* ZGCycleScrollViewUITests */,
+				EFC56B342016CBD200BA5487 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFC56B342016CBD200BA5487 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B332016CBD200BA5487 /* ZGCycleScrollView.app */,
+				EFC56B4B2016CBD300BA5487 /* ZGCycleScrollViewTests.xctest */,
+				EFC56B562016CBD300BA5487 /* ZGCycleScrollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFC56B352016CBD200BA5487 /* ZGCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B682016CBFC00BA5487 /* Source */,
+				EFC56B362016CBD200BA5487 /* AppDelegate.h */,
+				EFC56B372016CBD200BA5487 /* AppDelegate.m */,
+				EFC56B392016CBD300BA5487 /* ViewController.h */,
+				EFC56B3A2016CBD300BA5487 /* ViewController.m */,
+				EFC56B6D2016D3EE00BA5487 /* ZGCycleCell.h */,
+				EFC56B6E2016D3EE00BA5487 /* ZGCycleCell.m */,
+				EFC56B3C2016CBD300BA5487 /* Main.storyboard */,
+				EFC56B3F2016CBD300BA5487 /* Assets.xcassets */,
+				EFC56B412016CBD300BA5487 /* LaunchScreen.storyboard */,
+				EFC56B442016CBD300BA5487 /* Info.plist */,
+				EFC56B452016CBD300BA5487 /* main.m */,
+			);
+			path = ZGCycleScrollView;
+			sourceTree = "<group>";
+		};
+		EFC56B4E2016CBD300BA5487 /* ZGCycleScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B4F2016CBD300BA5487 /* ZGCycleScrollViewTests.m */,
+				EFC56B512016CBD300BA5487 /* Info.plist */,
+			);
+			path = ZGCycleScrollViewTests;
+			sourceTree = "<group>";
+		};
+		EFC56B592016CBD300BA5487 /* ZGCycleScrollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B5A2016CBD300BA5487 /* ZGCycleScrollViewUITests.m */,
+				EFC56B5C2016CBD300BA5487 /* Info.plist */,
+			);
+			path = ZGCycleScrollViewUITests;
+			sourceTree = "<group>";
+		};
+		EFC56B682016CBFC00BA5487 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B692016CBFC00BA5487 /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EFC56B692016CBFC00BA5487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B6A2016CC1100BA5487 /* ZGCycleScrollView.h */,
+				EFC56B6B2016CC1100BA5487 /* ZGCycleScrollView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFC56B322016CBD200BA5487 /* ZGCycleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC56B5F2016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollView" */;
+			buildPhases = (
+				EFC56B2F2016CBD200BA5487 /* Sources */,
+				EFC56B302016CBD200BA5487 /* Frameworks */,
+				EFC56B312016CBD200BA5487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZGCycleScrollView;
+			productName = ZGCycleScrollView;
+			productReference = EFC56B332016CBD200BA5487 /* ZGCycleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFC56B4A2016CBD300BA5487 /* ZGCycleScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC56B622016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollViewTests" */;
+			buildPhases = (
+				EFC56B472016CBD300BA5487 /* Sources */,
+				EFC56B482016CBD300BA5487 /* Frameworks */,
+				EFC56B492016CBD300BA5487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC56B4D2016CBD300BA5487 /* PBXTargetDependency */,
+			);
+			name = ZGCycleScrollViewTests;
+			productName = ZGCycleScrollViewTests;
+			productReference = EFC56B4B2016CBD300BA5487 /* ZGCycleScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFC56B552016CBD300BA5487 /* ZGCycleScrollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC56B652016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollViewUITests" */;
+			buildPhases = (
+				EFC56B522016CBD300BA5487 /* Sources */,
+				EFC56B532016CBD300BA5487 /* Frameworks */,
+				EFC56B542016CBD300BA5487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC56B582016CBD300BA5487 /* PBXTargetDependency */,
+			);
+			name = ZGCycleScrollViewUITests;
+			productName = ZGCycleScrollViewUITests;
+			productReference = EFC56B562016CBD300BA5487 /* ZGCycleScrollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFC56B2B2016CBD200BA5487 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "徐宗根";
+				TargetAttributes = {
+					EFC56B322016CBD200BA5487 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EFC56B4A2016CBD300BA5487 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFC56B322016CBD200BA5487;
+					};
+					EFC56B552016CBD300BA5487 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFC56B322016CBD200BA5487;
+					};
+				};
+			};
+			buildConfigurationList = EFC56B2E2016CBD200BA5487 /* Build configuration list for PBXProject "ZGCycleScrollView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFC56B2A2016CBD200BA5487;
+			productRefGroup = EFC56B342016CBD200BA5487 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFC56B322016CBD200BA5487 /* ZGCycleScrollView */,
+				EFC56B4A2016CBD300BA5487 /* ZGCycleScrollViewTests */,
+				EFC56B552016CBD300BA5487 /* ZGCycleScrollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFC56B312016CBD200BA5487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC56B432016CBD300BA5487 /* LaunchScreen.storyboard in Resources */,
+				EFC56B402016CBD300BA5487 /* Assets.xcassets in Resources */,
+				EFC56B3E2016CBD300BA5487 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B492016CBD300BA5487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B542016CBD300BA5487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFC56B2F2016CBD200BA5487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC56B3B2016CBD300BA5487 /* ViewController.m in Sources */,
+				EFC56B6F2016D3EE00BA5487 /* ZGCycleCell.m in Sources */,
+				EFC56B6C2016CC1100BA5487 /* ZGCycleScrollView.m in Sources */,
+				EFC56B462016CBD300BA5487 /* main.m in Sources */,
+				EFC56B382016CBD200BA5487 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B472016CBD300BA5487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC56B502016CBD300BA5487 /* ZGCycleScrollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC56B522016CBD300BA5487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC56B5B2016CBD300BA5487 /* ZGCycleScrollViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFC56B4D2016CBD300BA5487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC56B322016CBD200BA5487 /* ZGCycleScrollView */;
+			targetProxy = EFC56B4C2016CBD300BA5487 /* PBXContainerItemProxy */;
+		};
+		EFC56B582016CBD300BA5487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC56B322016CBD200BA5487 /* ZGCycleScrollView */;
+			targetProxy = EFC56B572016CBD300BA5487 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFC56B3C2016CBD300BA5487 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC56B3D2016CBD300BA5487 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFC56B412016CBD300BA5487 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC56B422016CBD300BA5487 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFC56B5D2016CBD300BA5487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFC56B5E2016CBD300BA5487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFC56B602016CBD300BA5487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9W8KXJ7KY8;
+				INFOPLIST_FILE = ZGCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kk.hongnishuitest-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFC56B612016CBD300BA5487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9W8KXJ7KY8;
+				INFOPLIST_FILE = ZGCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kk.hongnishuitest-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFC56B632016CBD300BA5487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZGCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zong.com.ZGCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZGCycleScrollView.app/ZGCycleScrollView";
+			};
+			name = Debug;
+		};
+		EFC56B642016CBD300BA5487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZGCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zong.com.ZGCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZGCycleScrollView.app/ZGCycleScrollView";
+			};
+			name = Release;
+		};
+		EFC56B662016CBD300BA5487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZGCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zong.com.ZGCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZGCycleScrollView;
+			};
+			name = Debug;
+		};
+		EFC56B672016CBD300BA5487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZGCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zong.com.ZGCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZGCycleScrollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFC56B2E2016CBD200BA5487 /* Build configuration list for PBXProject "ZGCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC56B5D2016CBD300BA5487 /* Debug */,
+				EFC56B5E2016CBD300BA5487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC56B5F2016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC56B602016CBD300BA5487 /* Debug */,
+				EFC56B612016CBD300BA5487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC56B622016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC56B632016CBD300BA5487 /* Debug */,
+				EFC56B642016CBD300BA5487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC56B652016CBD300BA5487 /* Build configuration list for PBXNativeTarget "ZGCycleScrollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC56B662016CBD300BA5487 /* Debug */,
+				EFC56B672016CBD300BA5487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFC56B2B2016CBD200BA5487 /* Project object */;
+}
