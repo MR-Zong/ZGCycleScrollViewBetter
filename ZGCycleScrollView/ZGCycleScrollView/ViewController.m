@@ -22,10 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+    /** ZGCycleScrollView 使用样例 **/
+    
     _cycleSV = [[ZGCycleScrollView alloc] init];
     _cycleSV.backgroundColor = [UIColor redColor];
     _cycleSV.delegate = self;
-    _cycleSV.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _cycleSV.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [_cycleSV.collectionView registerClass:[ZGCycleCell class] forCellWithReuseIdentifier:@"ZGCycleCellReusedId"];
     [self.view addSubview:_cycleSV];
     

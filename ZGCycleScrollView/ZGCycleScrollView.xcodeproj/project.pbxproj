@@ -17,6 +17,8 @@
 		EFC56B5B2016CBD300BA5487 /* ZGCycleScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B5A2016CBD300BA5487 /* ZGCycleScrollViewUITests.m */; };
 		EFC56B6C2016CC1100BA5487 /* ZGCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B6B2016CC1100BA5487 /* ZGCycleScrollView.m */; };
 		EFC56B6F2016D3EE00BA5487 /* ZGCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B6E2016D3EE00BA5487 /* ZGCycleCell.m */; };
+		EFC56B72201734CC00BA5487 /* ZGCycleScrollViewBetterV.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFC56B70201734CB00BA5487 /* ZGCycleScrollViewBetterV.gif */; };
+		EFC56B73201734CC00BA5487 /* ZGCycleScrollViewBetterH.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFC56B71201734CC00BA5487 /* ZGCycleScrollViewBetterH.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		EFC56B6B2016CC1100BA5487 /* ZGCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleScrollView.m; sourceTree = "<group>"; };
 		EFC56B6D2016D3EE00BA5487 /* ZGCycleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGCycleCell.h; sourceTree = "<group>"; };
 		EFC56B6E2016D3EE00BA5487 /* ZGCycleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCycleCell.m; sourceTree = "<group>"; };
+		EFC56B70201734CB00BA5487 /* ZGCycleScrollViewBetterV.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGCycleScrollViewBetterV.gif; sourceTree = "<group>"; };
+		EFC56B71201734CC00BA5487 /* ZGCycleScrollViewBetterH.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGCycleScrollViewBetterH.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				EFC56B3F2016CBD300BA5487 /* Assets.xcassets */,
 				EFC56B412016CBD300BA5487 /* LaunchScreen.storyboard */,
 				EFC56B442016CBD300BA5487 /* Info.plist */,
+				EFC56B71201734CC00BA5487 /* ZGCycleScrollViewBetterH.gif */,
+				EFC56B70201734CB00BA5487 /* ZGCycleScrollViewBetterV.gif */,
 				EFC56B452016CBD300BA5487 /* main.m */,
 			);
 			path = ZGCycleScrollView;
@@ -265,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC56B432016CBD300BA5487 /* LaunchScreen.storyboard in Resources */,
+				EFC56B73201734CC00BA5487 /* ZGCycleScrollViewBetterH.gif in Resources */,
 				EFC56B402016CBD300BA5487 /* Assets.xcassets in Resources */,
 				EFC56B3E2016CBD300BA5487 /* Main.storyboard in Resources */,
+				EFC56B72201734CC00BA5487 /* ZGCycleScrollViewBetterV.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
