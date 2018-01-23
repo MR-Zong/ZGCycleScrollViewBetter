@@ -28,6 +28,8 @@
         
         _pageControlHeight = 40;
         _pageTimeInterval = 5.0;
+        _scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
         [self setupViews];
     }
     return self;
@@ -94,8 +96,6 @@
         self.pageControl.hidden = YES;
     }
 
-    
-    
 }
 
 - (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection
@@ -181,7 +181,6 @@
 - (void)cycleScrollOperationWithScrollView:(UIScrollView *)scrollView
 {
     NSInteger index = [self indexWithScrollView:scrollView];
-//    NSLog(@"index %zd",index);
     
     if (index == 0) {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.numberOfCellItems - 2 inSection:0] atScrollPosition:self.scrollPosition animated:NO];

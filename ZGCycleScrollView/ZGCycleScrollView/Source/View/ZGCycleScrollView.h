@@ -36,11 +36,11 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, weak) id <ZGCycleScrollViewDelegate> delegate;
 
-/** 滚动方向
+/** 滚动方向 默认水平滚动
  */
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
-/** 切换下一页 时间间隔
+/** 切换下一页 时间间隔 默认间隔5秒
  */
 @property (nonatomic, assign) NSTimeInterval pageTimeInterval;
 
