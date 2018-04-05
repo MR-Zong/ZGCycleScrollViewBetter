@@ -14,18 +14,18 @@
 
 // 必须 实现 required 方法
 @required
-- (NSInteger)zgCycleCollectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
-- (UICollectionViewCell *)zgCycleCollectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)zg_cycleCollectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
+- (UICollectionViewCell *)zg_cycleCollectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 // 可选实现
 @optional
 /** 点击cell 回调
  */
-- (void)zgCycleCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)zg_cycleCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 
 /** 切换下一页的时候，回调
  */
-- (void)zgCycleScrollView:(ZGCycleScrollView *)scrollView didScrollToIndex:(NSInteger)index;
+- (void)zg_cycleScrollView:(ZGCycleScrollView *)scrollView didScrollToIndex:(NSInteger)index;
 
 @end
 

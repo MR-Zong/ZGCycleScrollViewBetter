@@ -27,7 +27,8 @@
     
     _cycleSV = [[ZGCycleScrollView alloc] init];
     _cycleSV.delegate = self;
-    _cycleSV.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _cycleSV.pageTimeInterval = 1;
+    _cycleSV.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [_cycleSV.collectionView registerClass:[ZGCycleCell class] forCellWithReuseIdentifier:@"ZGCycleCellReusedId"];
     [self.view addSubview:_cycleSV];
     
@@ -36,25 +37,25 @@
 
 
 #pragma mark - ZGCycleScrollViewDelegate
-- (NSInteger)zgCycleCollectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)zg_cycleCollectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 5;
 }
 
 
-- (UICollectionViewCell *)zgCycleCollectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)zg_cycleCollectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ZGCycleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZGCycleCellReusedId" forIndexPath:indexPath];
     cell.titleLabel.text = [NSString stringWithFormat:@"%zd",indexPath.item];
     return cell;
 }
 
-- (void)zgCycleCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)zg_cycleCollectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%zd",indexPath.row);
 }
 
-- (void)zgCycleScrollView:(ZGCycleScrollView *)scrollView didScrollToIndex:(NSInteger)index
+- (void)zg_cycleScrollView:(ZGCycleScrollView *)scrollView didScrollToIndex:(NSInteger)index
 {
     NSLog(@"scrollTo %zd",index);
 }
