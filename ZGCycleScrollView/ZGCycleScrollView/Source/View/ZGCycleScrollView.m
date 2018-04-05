@@ -188,14 +188,14 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat startEdge = 0;
-    CGFloat endEdge = scrollView.bounds.size.width;
-    CGFloat contentOffsetTarget = scrollView.contentOffset.x;
-    if (self.scrollPosition == UICollectionViewScrollDirectionVertical) {
+    CGFloat endEdge = scrollView.bounds.size.height;
+    CGFloat contentOffsetTarget = scrollView.contentOffset.y;
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
         startEdge = 0;
-        endEdge = scrollView.bounds.size.height;
-        contentOffsetTarget = scrollView.contentOffset.y;
+        endEdge = scrollView.bounds.size.width;
+        contentOffsetTarget = scrollView.contentOffset.x;
     }
-    
+
     if (contentOffsetTarget > startEdge  && contentOffsetTarget <= endEdge ) {
         ;
     }else {

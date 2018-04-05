@@ -27,7 +27,7 @@
     
     _cycleSV = [[ZGCycleScrollView alloc] init];
     _cycleSV.delegate = self;
-    _cycleSV.pageTimeInterval = 4;
+    _cycleSV.pageTimeInterval = 1000;
     _cycleSV.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [_cycleSV.collectionView registerClass:[ZGCycleCell class] forCellWithReuseIdentifier:@"ZGCycleCellReusedId"];
     [self.view addSubview:_cycleSV];
@@ -61,7 +61,7 @@
 
 - (void)zg_cycleScrollView:(ZGCycleScrollView *)scrollView didScrollToIndex:(NSInteger)index
 {
-//    NSLog(@"scrollTo %zd",index);
+    NSLog(@"scrollTo %zd",index);
 }
 
 @end
