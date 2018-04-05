@@ -62,6 +62,7 @@
     // pageControl
     _pageControl = [[UIPageControl alloc] init];
     _pageControl.hidesForSinglePage = YES;
+    _pageControl.userInteractionEnabled = NO;
     [self addSubview:_pageControl];
     
 }

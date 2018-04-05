@@ -27,7 +27,7 @@
     
     _cycleSV = [[ZGCycleScrollView alloc] init];
     _cycleSV.delegate = self;
-    _cycleSV.pageTimeInterval = 1000;
+    _cycleSV.pageTimeInterval = 4;
     _cycleSV.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [_cycleSV.collectionView registerClass:[ZGCycleCell class] forCellWithReuseIdentifier:@"ZGCycleCellReusedId"];
     [self.view addSubview:_cycleSV];
@@ -47,10 +47,10 @@
 {
     ZGCycleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZGCycleCellReusedId" forIndexPath:indexPath];
     cell.titleLabel.text = [NSString stringWithFormat:@"%zd",indexPath.item];
-    int R = (arc4random() % 256) ;
-    int G = (arc4random() % 256) ;
-    int B = (arc4random() % 256) ;
-    cell.backgroundColor = [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1];
+//    int R = (arc4random() % 256) ;
+//    int G = (arc4random() % 256) ;
+//    int B = (arc4random() % 256) ;
+//    cell.backgroundColor = [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1];
     return cell;
 }
 
