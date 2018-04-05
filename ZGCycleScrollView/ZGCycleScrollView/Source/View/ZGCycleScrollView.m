@@ -8,7 +8,7 @@
 
 #import "ZGCycleScrollView.h"
 
-@interface ZGCycleScrollView () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ZGCycleScrollView () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, assign) CGFloat pageControlHeight;
@@ -64,8 +64,8 @@
 {
     [super layoutSubviews];
     
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    flowLayout.itemSize = self.bounds.size;
+//    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+//    flowLayout.itemSize = self.bounds.size;
 
     // collectionView
     self.collectionView.frame = self.bounds;
@@ -165,42 +165,57 @@
     }
 }
 
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.collectionView.bounds.size;
+}
+
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    [self startTimer];
-    [self cycleScrollOperationWithScrollView:scrollView];
-    
-}
-
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
-    [self cycleScrollOperationWithScrollView:scrollView];
-}
-
-- (void)cycleScrollOperationWithScrollView:(UIScrollView *)scrollView
-{
-    NSInteger index = [self indexWithScrollView:scrollView];
-    
-    if (index == 0) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.numberOfCellItems - 2 inSection:0] atScrollPosition:self.scrollPosition animated:NO];
-        self.pageControl.currentPage = self.numberOfDataItems - 1;
-    }else if(index == self.numberOfCellItems - 1){
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:self.scrollPosition animated:NO];
-        self.pageControl.currentPage = 0;
-    }else {
-        self.pageControl.currentPage = index - 1;
-    }
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(zgCycleScrollView:didScrollToIndex:)]) {
-        [self.delegate zgCycleScrollView:self didScrollToIndex:self.pageControl.currentPage];
-    }
-}
-
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self stopTimer];
 }
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self startTimer];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    CGFloat width = scrollView.bounds.size.width;
+//    CGFloat startOffset = 0;
+//    CGFloat endOffset  = width;
+//    if (scrollView.contentOffset.x >= startOffset && scrollView.contentOffset.x >= endOffset) {
+        [self cycleScrollOperationWithScrollView:scrollView];
+//    }
+}
+
+- (void)cycleScrollOperationWithScrollView:(UIScrollView *)scrollView
+{
+    NSInteger curIndex = [self indexWithScrollView:scrollView];
+    
+    if (curIndex == 0) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.numberOfCellItems - 2 inSection:0] atScrollPosition:self.scrollPosition animated:NO];
+        self.pageControl.currentPage = self.numberOfDataItems - 1;
+    }else if(curIndex == self.numberOfCellItems - 1){
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:self.scrollPosition animated:NO];
+        self.pageControl.currentPage = 0;
+    }else {
+        self.pageControl.currentPage = curIndex - 1;
+    }
+    
+    // 特别处理代理方法
+    static NSInteger preIndex = -1;
+    if (preIndex != self.pageControl.currentPage) {
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(zgCycleScrollView:didScrollToIndex:)]) {
+            [self.delegate zgCycleScrollView:self didScrollToIndex:self.pageControl.currentPage];
+        }
+    }
+    preIndex = self.pageControl.currentPage;
+}
+
 
 #pragma mark - Tiemr
 - (void)resetTimer
@@ -229,10 +244,12 @@
 #pragma mark -
 - (void)scrollToNextPageWithScrollView:(UIScrollView *)scrollView
 {
-    NSInteger index = [self indexWithScrollView:scrollView];
-    NSInteger nextItem = index + 1;
-    if (nextItem > self.numberOfCellItems - 1) {
-        nextItem = self.numberOfCellItems - 1;
+    NSInteger curIndex = [self indexWithScrollView:scrollView];
+    NSInteger nextItem = curIndex + 1;
+    if(curIndex == 0){
+        nextItem = self.numberOfCellItems - 2;
+    }else if (curIndex == self.numberOfCellItems - 1) {
+        nextItem = 1;
     }
     NSIndexPath *nextIndexP = [NSIndexPath indexPathForItem:nextItem inSection:0];
     [self.collectionView scrollToItemAtIndexPath:nextIndexP atScrollPosition:self.scrollPosition animated:YES];

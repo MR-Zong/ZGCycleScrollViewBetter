@@ -27,7 +27,7 @@
     
     _cycleSV = [[ZGCycleScrollView alloc] init];
     _cycleSV.delegate = self;
-//    _cycleSV.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _cycleSV.scrollDirection = UICollectionViewScrollDirectionVertical;
     [_cycleSV.collectionView registerClass:[ZGCycleCell class] forCellWithReuseIdentifier:@"ZGCycleCellReusedId"];
     [self.view addSubview:_cycleSV];
     
