@@ -8,6 +8,8 @@
 
 #import "ZGCycleScrollView.h"
 
+#define ZGDefaultPageTimeInterval 5.0
+
 @interface ZGCycleScrollView () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIPageControl *pageControl;
@@ -29,7 +31,7 @@
     if (self = [super initWithFrame:frame]) {
         
         _pageControlHeight = 40;
-        _pageTimeInterval = 5.0;
+        _pageTimeInterval = ZGDefaultPageTimeInterval;
         _scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         [self setupViews];
@@ -68,9 +70,6 @@
 {
     [super layoutSubviews];
     
-//    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-//    flowLayout.itemSize = self.bounds.size;
-
     // collectionView
     self.collectionView.frame = self.bounds;
     
@@ -187,13 +186,28 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self cycleScrollOperationWithScrollView:scrollView];
+    CGFloat startEdge = 0;
+    CGFloat endEdge = scrollView.bounds.size.width;
+    CGFloat contentOffsetTarget = scrollView.contentOffset.x;
+    if (self.scrollPosition == UICollectionViewScrollDirectionVertical) {
+        startEdge = 0;
+        endEdge = scrollView.bounds.size.height;
+        contentOffsetTarget = scrollView.contentOffset.y;
+    }
+    
+    if (contentOffsetTarget > startEdge  && contentOffsetTarget <= endEdge ) {
+        ;
+    }else {
+        
+        [self cycleScrollOperationWithScrollView:scrollView];
+    }
+
 }
 
 - (void)cycleScrollOperationWithScrollView:(UIScrollView *)scrollView
 {
     NSInteger curIndex = [self indexWithScrollView:scrollView];
-    
+
     if (curIndex == 0) {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.numberOfCellItems - 2 inSection:0] atScrollPosition:self.scrollPosition animated:NO];
         self.pageControl.currentPage = self.numberOfDataItems - 1;
@@ -259,7 +273,9 @@
 - (void)setPageTimeInterval:(NSTimeInterval)pageTimeInterval
 {
     _pageTimeInterval = pageTimeInterval;
-    
+    if (_pageTimeInterval == 0) {
+        _pageTimeInterval = ZGDefaultPageTimeInterval;
+    }
     [self resetTimer];
 }
 
